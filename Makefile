@@ -1,7 +1,7 @@
 install:
 	npm install
 
-build:
+publish:
 	npx gulp build
 
 watch:

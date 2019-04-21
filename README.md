@@ -9,7 +9,7 @@ $ make install
 ```
 ### Build project for production
 ```sh
-$ make build
+$ make publish
 ```
 ### Watch
 ```sh
