@@ -1,17 +1,17 @@
 ul {
 list-style: none;
+}
  
-   li {
+   ul li {
    padding: 15px;
    display: inline-block;
+   }
  
-      a {
+   ul li a {
       text-decoration: none;
       font-size: 16px;
       color: #444;
      }
-   }
-}
 
 div {
   width: 100%;
@@ -19,5 +19,6 @@ div {
 
 #mytestid {
   opacity: inherit;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }

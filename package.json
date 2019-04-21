@@ -1,0 +1,48 @@
+{
+  "name": "event-planner",
+  "version": "1.0.0",
+  "description": "calendar and event planner",
+  "main": "",
+  "keywords": [
+    "calendar",
+    "event",
+    "planner"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stanislav Dzisiak",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corsicanec82/event-planner.git"
+  },
+  "homepage": "https://github.com/corsicanec82/event-planner#readme",
+  "bugs": {
+    "url": "https://github.com/corsicanec82/event-planner/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "autoprefixer": "^9.5.1",
+    "babel-eslint": "^10.0.1",
+    "cssnano": "^4.1.10",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "gulp": "^4.0.0",
+    "gulp-dest": "^0.2.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "postcss-import": "^12.0.1",
+    "precss": "^4.0.0"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 0.2%",
+    "Firefox ESR",
+    "maintained node versions"
+  ]
+}
