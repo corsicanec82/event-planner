@@ -2,16 +2,16 @@ ul {
 list-style: none;
 }
  
-   ul li {
-   padding: 15px;
-   display: inline-block;
-   }
+  ul li {
+    padding: 15px;
+    display: inline-block;
+  }
  
-   ul li a {
+  ul li a {
       text-decoration: none;
       font-size: 16px;
       color: #444;
-     }
+    }
 
 div {
   width: 100%;
@@ -22,3 +22,17 @@ div {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.testclass {
+  opacity: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.testclass div {
+    width: 100px;
+  }
+
+.testclass_inner {
+    height: 200px;
+  }

@@ -7,6 +7,7 @@ import autoprefixer from 'autoprefixer';
 // import dest from 'gulp-dest';
 import postcssImport from 'postcss-import';
 import rename from 'gulp-rename';
+import babel from 'gulp-babel';
 
 gulp.task('test', (cb) => {
   console.log('I\'m using gulpfile with ES6');
@@ -26,4 +27,12 @@ gulp.task('css', () => (
     // .pipe(dest('.', { ext: '.css' }))
     .pipe(rename({ extname: '.css' }))
     .pipe(gulp.dest('./build/css'))
+));
+
+gulp.task('js', () => (
+  gulp.src('./src/js/**/*.js')
+    .pipe(babel({
+      presets: ['@babel/env'],
+    }))
+    .pipe(gulp.dest('./build/js'))
 ));

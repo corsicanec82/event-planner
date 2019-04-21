@@ -1,16 +1,16 @@
 ul {
 list-style: none;
  
-   li {
-   padding: 15px;
-   display: inline-block;
- 
-      a {
+  li {
+    padding: 15px;
+    display: inline-block;
+
+    a {
       text-decoration: none;
       font-size: 16px;
       color: #444;
-     }
-   }
+    }
+  }
 }
 
 div {
@@ -20,4 +20,17 @@ div {
 #mytestid {
   opacity: inherit;
   box-sizing: border-box;
+}
+
+.testclass {
+  opacity: inherit;
+  box-sizing: border-box;
+
+  div {
+    width: 100px;
+  }
+
+  &_inner {
+    height: 200px;
+  }
 }
