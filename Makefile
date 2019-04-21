@@ -1,8 +1,11 @@
 install:
 	npm install
 
-css:
-	npx gulp css
+build:
+	npx gulp build
+
+watch:
+	npx gulp watch
 
 lint:
 	npx eslint .

@@ -1,0 +1,1 @@
+"use strict";var hello=function(){var l=0<arguments.length&&void 0!==arguments[0]?arguments[0]:"n/a";return"Hello ".concat(l)};console.log(hello("User"));
