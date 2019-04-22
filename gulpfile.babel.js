@@ -7,19 +7,19 @@ import cssnano from 'cssnano';
 import postcssImport from 'postcss-import';
 import rename from 'gulp-rename';
 import babel from 'gulp-babel';
-// import concat from 'gulp-concat';
+import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import rigger from 'gulp-rigger';
 import connect from 'gulp-connect';
 import del from 'del';
 
 const path = {
-  build: {
-    html: 'build/',
-    js: 'build/js/',
-    css: 'build/css/',
-    img: 'build/img/',
-    fonts: 'build/fonts/',
+  dist: {
+    html: 'dist/',
+    js: 'dist/js/',
+    css: 'dist/css/',
+    img: 'dist/img/',
+    fonts: 'dist/fonts/',
   },
   src: {
     html: [
@@ -31,12 +31,12 @@ const path = {
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*',
   },
-  clean: './build/*',
+  clean: './dist/*',
 };
 
 const configServer = {
   name: 'Front-end server',
-  root: './build',
+  root: './dist',
   host: 'localhost',
   port: 9000,
   livereload: true,
@@ -54,7 +54,7 @@ const clean = () => (
 const html = () => (
   gulp.src(path.src.html)
     .pipe(rigger())
-    .pipe(gulp.dest(path.build.html))
+    .pipe(gulp.dest(path.dist.html))
     .pipe(connect.reload())
 );
 
@@ -67,20 +67,22 @@ const css = () => (
       autoprefixer,
       cssnano,
     ]))
-    // .pipe(sourcemaps.write())
     .pipe(rename({ extname: '.css' }))
-    .pipe(gulp.dest(path.build.css))
+    // .pipe(sourcemaps.write())
+    .pipe(gulp.dest(path.dist.css))
     .pipe(connect.reload())
 );
 
 const js = () => (
   gulp.src(path.src.js)
+    // .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['@babel/env'],
     }))
-    // .pipe(concat('main.js'))
+    .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(path.build.js))
+    // .pipe(sourcemaps.write())
+    .pipe(gulp.dest(path.dist.js))
     .pipe(connect.reload())
 );
 
