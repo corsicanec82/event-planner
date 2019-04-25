@@ -22,7 +22,7 @@ body {
   background-color: #f4f4f4;
   box-shadow: 0 0 0.5em #bdbdbd;
   padding-left: 3.8em;
-  padding-right: 2.2em;
+  padding-right: 3.8em;
 }
 
 .button {
@@ -90,24 +90,36 @@ body {
   transform: rotate(45deg);
 }
 
-.calendar {
-  margin: 0;
-  padding: 0;
-  background-color: #006fca;
+#content {
+  padding-left: 3.8em;
+  padding-right: 3.8em;
+}
 
-  li {
-    width: 14.208%;
-    list-style-type: none;
-    float: left;
+.calendar {
+  width: 100%;
+  margin-top: 30px;
+  border-spacing: 0;
+  border-left: 1px solid #b1b1b1;
+  border-bottom: 1px solid #b1b1b1;
+
+  td {
+    position: relative;
     border-right: 1px solid #b1b1b1;
     border-top: 1px solid #b1b1b1;
+    text-align: center;
+  }
 
-    &.left {
-      border-left: 1px solid #b1b1b1;
-    }
+  td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+  }
 
-    &.down {
-      border-bottom: 1px solid #b1b1b1;
-    }
+  td .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }

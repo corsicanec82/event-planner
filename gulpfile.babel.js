@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import postcss from 'gulp-postcss';
 import precss from 'precss';
 import autoprefixer from 'autoprefixer';
-// import cssnano from 'cssnano';
+import cssnano from 'cssnano';
 // import sourcemaps from 'gulp-sourcemaps';
 import postcssImport from 'postcss-import';
 import rename from 'gulp-rename';
@@ -65,7 +65,7 @@ const css = () => (
       postcssImport,
       precss,
       autoprefixer,
-      // cssnano,
+      cssnano,
     ]))
     .pipe(rename({ extname: '.css' }))
     // .pipe(sourcemaps.write())
